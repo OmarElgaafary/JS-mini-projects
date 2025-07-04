@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="cart.js"></script>
+</head>
+
+<body>
+    <p>Card Quantity</p>
+    <div>
+        <button onclick="console.log(`Cart Quantity: ${cartQuantitiy}`);">Show Quantity</button>
+        <button onclick=" cartQuantitiy = cartQuantitiy + 1;console.log(`Cart Quantity: ${cartQuantitiy}`);">Add to
+            Cart</button>
+        <button onclick="cartQuantitiy = cartQuantitiy + 2;console.log(`Cart Quantity: ${cartQuantitiy}`);">+2</button>
+        <button onclick="cartQuantitiy = cartQuantitiy + 3;console.log(`Cart Quantity: ${cartQuantitiy}`);">+3</button>
+        <button onclick="cartQuantitiy = 0;console.log(`Cart was rest.`);">Reset Cart</button>
+    </div>
+</body>
+
+</html>

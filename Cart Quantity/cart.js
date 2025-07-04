@@ -1,0 +1,2 @@
+let cartQuantitiy = 0;
+

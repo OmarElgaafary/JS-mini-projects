@@ -1,0 +1,30 @@
+.sub-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 300px;
+}
+
+.js-sub {
+    background-color: black;
+    color: whitesmoke;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 150px;
+    height: 40px;
+    border-radius: 75px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.js-subed {
+    background-color: lightgray;
+    color: black;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 150px;
+    height: 40px;
+    border-radius: 75px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
