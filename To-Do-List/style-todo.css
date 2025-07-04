@@ -1,0 +1,97 @@
+p
+{
+    display: inline-block;
+}
+
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.outer-div
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.outer-div *
+{
+    font-weight: bold;
+}
+
+.to-do-header
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.to-do-header *
+{
+    margin-left: 10px;
+}
+
+.to-do-search
+{
+    padding-left: 10px;
+    height: 40px;
+    width: 500px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.js-due-date
+{
+    height: 40px;
+    width: 150px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.add-button, .js-button
+{
+    background-color: black;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    height: 40px;
+    width: 75px;
+    cursor: pointer;
+}
+
+.to-do-items
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.js-paragraph
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.inner-to-do-items
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.inner-to-do-items *
+{
+    margin-left: 10px;
+}
+
+.js-button
+{
+    background-color: lightgray;
+    color: black;
+    font-weight: bold;
+}

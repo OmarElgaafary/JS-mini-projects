@@ -1,23 +1,29 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style-todo.css">
 </head>
 
 <body>
+  <div class="outer-div">
     <p>To Do List</p>
-    <input onkeydown="enterDown(event);" placeholder="Type todo name" class="to-do-search">
-    <input class="js-due-date" type="date">
-    <button onclick="displaySearch(event);">Add</button>
-
-    <div class="to-do-items">
-
+    <div class="to-do-header">
+      <input class="to-do-search" onkeydown="enterDown(event);" placeholder="Type todo name">
+      <input class="js-due-date" type="date">
+      <button class="add-button" onclick="displaySearch(event);">Add</button>
     </div>
+  </div>
 
 
-    <script src="todo.js"></script>
+  <div class="to-do-items">
+
+  </div>
+
+
+  <script src="todo.js"></script>
 </body>
 
 </html>
