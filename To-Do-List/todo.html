@@ -7,8 +7,15 @@
 </head>
 
 <body>
-    <input class="to-do-search">
+    <p>To Do List</p>
+    <input onkeydown="enterDown(event);" placeholder="Type todo name" class="to-do-search">
+    <input class="js-due-date" type="date">
     <button onclick="displaySearch(event);">Add</button>
+
+    <div class="to-do-items">
+
+    </div>
+
 
     <script src="todo.js"></script>
 </body>
