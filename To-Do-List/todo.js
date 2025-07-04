@@ -4,7 +4,11 @@ const toDoItems = document.querySelector('.to-do-items');
 const toDoDelete = document.querySelector('.to-do-delete');
 
 
-let array = [];
+let array = JSON.parse(localStorage.getItem('array'));
+
+if (array == null)
+    array = [];
+
 let string;
 
 function displaySearch() {
@@ -27,11 +31,22 @@ const updateToDos = (array) => {
     toDoItems.innerHTML = '';
     for (let i = 0; i < array.length; i++) {
         if (array[i])
-            toDoItems.innerHTML += `<div class"inner-to-do-items"><p class="js-paragraph">${array[i].name} ${array[i].dueDate}</p><button class="js-button" onclick="array.splice(${i}, 1); updateToDos(array);">Delete</button></div>`;
+            toDoItems.innerHTML += `<div class"inner-to-do-items">
+                                        <p class="js-paragraph">
+                                            ${array[i].name} ${array[i].dueDate}
+                                        </p>
+                                        <button class="js-button" onclick="array.splice(${i}, 1); updateToDos(array);">
+                                            Delete
+                                        </button>
+                                    </div>`;
     }
+
+    localStorage.setItem('array', JSON.stringify(array));
 }
 
 const enterDown = (event) => {
     if (event.key == 'Enter')
         displaySearch();
 }
+
+updateToDos(array);
