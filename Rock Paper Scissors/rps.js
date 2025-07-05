@@ -1,6 +1,18 @@
 const decisionElement = document.querySelector('.decision');
 const statsElement = document.querySelector('.stats');
 
+document.querySelector('.js-rock').addEventListener('click', () => {
+    checkComputer('Rock');
+});
+
+document.querySelector('.js-paper').addEventListener('click', () => {
+    checkComputer('Paper');
+});
+
+document.querySelector('.js-scissors').addEventListener('click', () => {
+    checkComputer('Scissors');
+});
+
 const calcWinRate = (wins, losses) => {
     let total = wins + losses;
     if (total == 0) return 0;

@@ -1,13 +1,20 @@
+document.querySelector('.add-button').addEventListener('click', () => {
+    increment();
+});
+
+document.querySelector('.remove-button').addEventListener('click', () => {
+    decrement();
+});
+
 let messages = 2;
 let blinked = false;
-
 
 const checkMessages = () => {
 
     setInterval(
         () => {
-                if (messages <= 0)
-                    return
+            if (messages <= 0)
+                return
 
             const title = String(document.title);
 
@@ -26,8 +33,7 @@ const checkMessages = () => {
         }, 1000);
 }
 
-function increment()
-{
+function increment() {
     let title = document.title;
     if (title.includes(`(${messages})`))
         return
@@ -35,8 +41,7 @@ function increment()
         messages++;
 }
 
-function decrement()
-{
+function decrement() {
     let title = document.title;
     if (title.includes(`(${messages})`))
         return

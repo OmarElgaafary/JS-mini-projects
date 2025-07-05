@@ -4,6 +4,14 @@ const toDoItems = document.querySelector('.to-do-items');
 const toDoDelete = document.querySelector('.to-do-delete');
 const errElement = document.querySelector('.err-msg')
 
+document.querySelector('.to-do-search').addEventListener('keydown', (event) => {
+    enterDown(event);
+});
+
+document.querySelector('.add-button').addEventListener('click', () => {
+    displaySearch();
+});
+
 
 let array = JSON.parse(localStorage.getItem('array'));
 

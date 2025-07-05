@@ -1,5 +1,9 @@
 const subButton = document.querySelector('.js-sub');
 
+document.querySelector('.js-button').addEventListener('click', () => {
+    subscribeAction();
+});
+
 const subscribeAction = () => {
 
     if (subButton.innerHTML === 'Subscribed') {
