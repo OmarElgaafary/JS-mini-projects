@@ -60,13 +60,13 @@ function updateToDo() {
                                         </button>
                                     </div>`;
     }
-    
+
     document.querySelectorAll('.js-button').forEach((value, index) => {
-    value.addEventListener('click', () => {
-        array.splice(index, 1);
-        updateToDo();
-    })
-});
+        value.addEventListener('click', () => {
+            array.splice(index, 1);
+            updateToDo();
+        })
+    });
 
 
     localStorage.setItem('array', JSON.stringify(array));
@@ -79,4 +79,3 @@ function enterDown(event) {
 
 
 updateToDo(array);
-
