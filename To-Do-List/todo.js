@@ -4,6 +4,9 @@ const toDoItems = document.querySelector('.to-do-items');
 const toDoDelete = document.querySelector('.to-do-delete');
 const errElement = document.querySelector('.err-msg')
 
+let array = JSON.parse(localStorage.getItem('array'));
+if (array == null)
+    array = [];
 document.querySelector('.to-do-search').addEventListener('keydown', (event) => {
     enterDown(event);
 });
@@ -12,13 +15,6 @@ document.querySelector('.add-button').addEventListener('click', () => {
     displaySearch();
 });
 
-
-let array = JSON.parse(localStorage.getItem('array'));
-
-if (array == null)
-    array = [];
-
-let string;
 
 function displaySearch() {
     const name = searchInput.value;
@@ -43,35 +39,44 @@ function displaySearch() {
         name,
         dueDate
     });
-    updateToDos(array);
+    updateToDo(array);
     searchInput.value = '';
 
 }
 
-const updateToDos = (array) => {
+function updateToDo() {
     toDoItems.innerHTML = '';
     for (let i = 0; i < array.length; i++) {
         if (array[i])
-            toDoItems.innerHTML += `<div style="display: grid; grid-template-columns: 500px 150px 100px; row-gap:10px;" class"inner-to-do-items">
+            toDoItems.innerHTML += `<div style="display: grid; grid-template-columns: 500px 150px 100px; row-gap:10px;" class="inner-to-do-items">
                                         <div class="js-paragraph">
                                             ${array[i].name} 
                                         </div>
                                         <div class="js-paragraph">
                                             ${array[i].dueDate}
                                         </div>
-                                        <button class="js-button" onclick="array.splice(${i}, 1); updateToDos(array);">
+                                        <button class="js-button">
                                             Delete
                                         </button>
                                     </div>`;
     }
+    
+    document.querySelectorAll('.js-button').forEach((value, index) => {
+    value.addEventListener('click', () => {
+        array.splice(index, 1);
+        updateToDo();
+    })
+});
+
 
     localStorage.setItem('array', JSON.stringify(array));
 }
 
-const enterDown = (event) => {
+function enterDown(event) {
     if (event.key == 'Enter')
         displaySearch();
 }
 
 
-updateToDos(array);
+updateToDo(array);
+
