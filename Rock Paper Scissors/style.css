@@ -26,17 +26,20 @@ body
 {
     height: 100px;
     width: 200px;
-    color: whiteNN;
+    color: white;
+    font-size: 20px;
 }
 
 button
 {
+    display: inline-block;
     background-color: rgb(25, 25, 25);
     border: 5px solid white;
     border-radius: 50px;
     width: 100px;
     height: 100px;
     margin: 5px;
+    font-size: 50px;
 }
 
 .head
@@ -44,4 +47,11 @@ button
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.macro
+{
+    font-size: 20px;
+    color: white;
+    width: 200px;
 }

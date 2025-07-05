@@ -32,6 +32,22 @@ const ranChoice = () => {
         return `Scissors`;
 }
 
+let playBool = false;
+let intervalID;
+function autoPlay() {
+    if (!playBool) {
+        intervalID = setInterval(() => {
+            let ranPick = ranChoice();
+            checkComputer(ranPick);
+        }, 500);
+        playBool = true;
+    }
+    else {
+        clearInterval(intervalID);
+        playBool = false;
+    }
+}
+
 const checkComputer = (input) => {
 
     let compChoice = ranChoice();

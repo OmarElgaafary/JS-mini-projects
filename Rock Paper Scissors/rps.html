@@ -11,16 +11,19 @@
 <body>
     <p class="head">Rock Paper Scissors</p>
     <div class="game-container">
-        
+
         <button onclick="checkComputer('Rock');">✊</button>
         <button onclick="checkComputer('Paper');">✋</button>
         <button onclick="checkComputer('Scissors');">✌️</button>
-        
+
     </div>
     <div class="stats-container">
         <p class="decision"></p>
         <p class="stats"></p>
-        <button class="rest-button" onclick="restScores();">Rest Scores</button>
+        <div>
+            <button class="rest-button" onclick="restScores();">Rest Scores</button>
+            <button class="macro" onclick="autoPlay();">Play with macro</button>
+        </div>
     </div>
     <script src="rps.js"></script>
 
