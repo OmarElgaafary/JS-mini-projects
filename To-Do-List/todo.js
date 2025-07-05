@@ -16,18 +16,15 @@ function displaySearch() {
     const name = searchInput.value;
     const dueDate = dueDateInput.value;
 
-    if (!name && !dueDate)
-    {
+    if (!name && !dueDate) {
         errElement.innerHTML = 'Please enter to do name & due date.';
         return;
     }
-    else if (!dueDate)
-    {
+    else if (!dueDate) {
         errElement.innerHTML = 'Please enter to due date.';
         return;
     }
-    else if (!name)
-    {
+    else if (!name) {
         errElement.innerHTML = 'Please enter to do name.';
         return;
     }
@@ -47,13 +44,13 @@ const updateToDos = (array) => {
     toDoItems.innerHTML = '';
     for (let i = 0; i < array.length; i++) {
         if (array[i])
-            toDoItems.innerHTML += `<div class"inner-to-do-items">
-                                        <p class="js-paragraph">
+            toDoItems.innerHTML += `<div style="display: grid; grid-template-columns: 500px 150px 100px; row-gap:10px;" class"inner-to-do-items">
+                                        <div class="js-paragraph">
                                             ${array[i].name} 
-                                        </p>
-                                        <p class="js-paragraph">
+                                        </div>
+                                        <div class="js-paragraph">
                                             ${array[i].dueDate}
-                                        </p>
+                                        </div>
                                         <button class="js-button" onclick="array.splice(${i}, 1); updateToDos(array);">
                                             Delete
                                         </button>

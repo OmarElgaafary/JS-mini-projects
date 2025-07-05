@@ -13,19 +13,18 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 100px;
+
 }
 
 .outer-div * {
     font-weight: bold;
 }
 
-.to-do-header {
-    display: flex;
-    flex-direction: row;
-}
-
-.to-do-header * {
-    margin-left: 10px;
+.to-do-header,
+.inner-to-do-items {
+    display: grid;
+    grid-template-columns: 500px 150px 100px;
+    
 }
 
 .to-do-search {
@@ -53,6 +52,7 @@ body {
     height: 40px;
     width: 75px;
     cursor: pointer;
+    margin-left: 10px;
 }
 
 .to-do-items {
@@ -60,17 +60,23 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    column-gap: 10px;
+}
+
+.to-do-items * {
+    margin-bottom: 10px;
 
 }
 
 .js-paragraph {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    margin-right: 20px;
+    padding: 10px 0px;
+
 }
 
 .inner-to-do-items {
-    display: flex;
+    display: grid;
     flex-direction: row;
 }
 
